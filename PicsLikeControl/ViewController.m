@@ -24,8 +24,8 @@
     UIImage *image1 = [UIImage imageNamed:@"main-library-button"];
     NSArray *images = @[image0, image1];
     
-    PicsLikeControl *picControl = [[PicsLikeControl alloc] initWithFrame:CGRectMake(20, 250, 44, 44) multiImages:images];
-    
+    PicsLikeControl *picControl = [[PicsLikeControl alloc] initWithFrame:CGRectMake(20, self.view.frame.size.height - 70, 44, 44) multiImages:images];
+    picControl.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     picControl.delegate = self;
     
     [self.view addSubview:picControl];
